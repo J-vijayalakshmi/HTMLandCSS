@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quaerat
-        dolor eum ipsa repellendus, alias, iusto eius, voluptas voluptatem
-        nesciunt itaque quas optio! Fugiat, nobis illo blanditiis sit omnis
-        dolores.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic distinctio
-        nulla voluptates repudiandae dicta quas laboriosam ut. Amet ad explicabo
-        ex dignissimos atque odio laudantium, porro assumenda, tempore,
-        obcaecati voluptate.
-      </p>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim maxime,
-        rerum sunt ipsam eum corporis nam ut eius tempore cum? Assumenda qui
-        consequatur eum ducimus sapiente eaque quidem delectus amet.
-      </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Survey Form</title>
+</head>
+<body>
+  <div class="abc">
+  <div class="survey">
+    <form class="logInForm" id="surveyForm" autocomplete="off">
+      <h2>Survey Form</h2>
+      <div class="inputBox">
+        <input type="text" name="first-name" id="f-name" required placeholder="first name"/>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="middle-name" id="m-name" placeholder="middle name"/>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="last-name" id="l-name" required placeholder="last name"/>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="Address" id="add" required placeholder="Address"/>
+      </div>
+      <div class="inputBox">
+        <input type="text" name="pincode" id="pin" required placeholder="pincode" maxlength="6" pattern="\d{6}" title="Please enter a valid 6-digit pincode"/>
+      </div>
+      <input type="submit" class="submit" value="submit" />
+    </form>
+  </div>
+    <div class="details" id="detailsContainer" style="display: none;">
+      <p><span id="head" style="font-size: 20px;"></span>
+      <br>
+        <h3>first name : </h3><span id="sf-name"></span>
+        <h3>middle name : </h3><span id="sm-name"></span>
+        <h3>last name : </h3><span id="sl-name"></span>
+        <h3>address : </h3><span id="s-add"></span>
+        <h3>pincode : </h3><span id="s-pin"></span></p>
     </div>
-  </body>
+</div>
+  <script src="survey.js">
+  </script>
+</body>
 </html>
